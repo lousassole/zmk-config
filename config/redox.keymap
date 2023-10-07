@@ -22,7 +22,7 @@
         LayerShift_0_ColorChange: LayerShift_0_ColorChange {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_COLOR_HSB(97,100,50) &to 0 &kp>;
+            bindings = <&rgb_ug RGB_COLOR_HSB(97,100,50) &to 0>;
             label = "LAYERSHIFT_0_COLORCHANGE";
         };
     };
