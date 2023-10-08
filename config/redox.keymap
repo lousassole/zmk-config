@@ -13,18 +13,6 @@
 
 / {
     macros {
-        LayerShift_1_ColorChange: LayerShift_1_ColorChange {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_COLOR_HSB(274,100,50) &to 1>;
-            label = "LAYERSHIFT_1_COLORCHANGE";
-        };
-        LayerShift_0_ColorChange: LayerShift_0_ColorChange {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_COLOR_HSB(97,100,50) &to 0>;
-            label = "LAYERSHIFT_0_COLORCHANGE";
-        };
     };
 
     keymap {
@@ -39,11 +27,11 @@
             // | CRTL  | ALT | GUI | LOWER |    GUI    | LOWER | SPACE   | --- | DEL  | SPACE |     RAISE     | LEFT  | DOWN | UP |   RIGHT   |
 
             bindings = <
-&kp GRAVE       &kp N1   &kp N2   &kp N3        &kp N4     &kp N5                                                                                   &kp N6  &kp N7     &kp N8     &kp N9    &kp N0    &kp BACKSPACE
-&kp TAB         &kp Q    &kp W    &kp E         &kp R      &kp T   &kp LEFT_WIN                                          &LayerShift_1_ColorChange  &kp Y   &kp U      &kp I      &kp O     &kp P     &kp MINUS
-&kp LEFT_SHIFT  &kp A    &kp S    &kp D         &kp F      &kp G   &kp LBKT                                              &kp RBKT                   &kp H   &kp J      &kp K      &kp L     &kp SEMI  &kp APOSTROPHE
-&kp LCTRL       &kp Z    &kp X    &kp C         &kp V      &kp B   &kp ESC       &kp RIGHT_PARENTHESIS    &kp SLASH      &kp BACKSLASH              &kp N   &kp M      &kp COMMA  &kp DOT   &kp UP    &kp SLASH
-&kp CLCK        &kt F17  &kp F18  &kp LEFT_ALT  &kp SPACE          &kp SPACE     &kp LEFT_PARENTHESIS     &kp BACKSLASH  &kp BSPC                           &kp ENTER  &kp F19    &kp LEFT  &kp DOWN  &kp RIGHT
+&kp ESC     &kp N1   &kp N2   &kp N3        &kp N4     &kp N5                                                                               &kp N6  &kp N7     &kp N8     &kp N9    &kp N0    &kp BACKSPACE
+&kp TAB     &kp Q    &kp W    &kp E         &kp R      &kp T   &kp LEFT_WIN                                                  &tog 1         &kp Y   &kp U      &kp I      &kp O     &kp P     &kp MINUS
+&kp CLCK    &kp A    &kp S    &kp D         &kp F      &kp G   &kp LBKT                                                      &kp RBKT       &kp H   &kp J      &kp K      &kp L     &kp SEMI  &kp APOSTROPHE
+&kp LSHIFT  &kp Z    &kp X    &kp C         &kp V      &kp B   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp SLASH      &kp BACKSLASH  &kp N   &kp M      &kp COMMA  &kp DOT   &kp UP    &kp SLASH
+&kp LCTRL   &kt F17  &kp F18  &kp LEFT_ALT  &kp SPACE          &kp RET               &kp BACKSPACE            &kp BACKSPACE  &kp ENTER              &kp SPACE  &kp F19    &kp LEFT  &kp DOWN  &kp RIGHT
             >;
         };
 
@@ -56,11 +44,11 @@
             // | CRTL  | ALT | GUI | LOWER |     GUI     | LOWER | SPACE   | --- | DEL  |  0  |    RAISE  | LEFT | DOWN | UP  | RIGHT |
 
             bindings = <
-&trans  &kp F1     &kp F2     &kp F3     &kp F4           &kp F5                                                                                                               &kp F6           &kp F7           &kp F8           &kp F9           &kp F10         &kp BACKSPACE
-&trans  &kp F11    &kp F12    &kp F13    &kp F14          &kp F15    &bt BT_NXT                                                             &LayerShift_0_ColorChange          &kp F16          &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMLOCK  &none
-&trans  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT         &kp BSLH   &out OUT_TOG                                                           &none                              &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS     &none
-&trans  &none      &kp LGUI   &kp LC(C)  &kp LC(V)        &kp GRAVE  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD    &rgb_ug RGB_COLOR_HSB(106,100,50)  &rgb_ug RGB_COLOR_HSB(298,100,50)  &kp KP_DIVIDE    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS    &none
-&trans  &trans     &trans     &trans     &rgb_ug RGB_TOG             &rgb_ug RGB_EFR  &rgb_ug RGB_EFF    &trans                             &kp ENTER                                           &kp KP_NUMBER_0  &trans           &trans           &trans          &trans
+&rgb_ug RGB_SAI  &kp F1           &kp F2     &kp F3     &kp F4           &kp F5                                                                                                               &kp F6           &kp F7           &kp F8           &kp F9           &kp F10         &kp BACKSPACE
+&rgb_ug RGB_SAD  &kp F11          &kp F12    &kp F13    &kp F14          &kp F15    &bt BT_NXT                                                             &tog 0                             &kp F16          &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMLOCK  &none
+&rgb_ug RGB_HUI  &kp MINUS        &kp EQUAL  &kp LBKT   &kp RBKT         &kp BSLH   &out OUT_TOG                                                           &none                              &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS     &none
+&rgb_ug RGB_HUD  &rgb_ug RGB_TOG  &kp LGUI   &kp LC(C)  &kp LC(V)        &kp GRAVE  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD    &rgb_ug RGB_COLOR_HSB(106,100,50)  &rgb_ug RGB_COLOR_HSB(298,100,50)  &kp KP_DIVIDE    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS    &none
+&rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &trans     &trans     &rgb_ug RGB_TOG             &rgb_ug RGB_EFR  &rgb_ug RGB_EFF    &trans                             &kp ENTER                                           &kp KP_NUMBER_0  &trans           &trans           &trans          &trans
             >;
         };
     };
