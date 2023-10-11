@@ -46,7 +46,7 @@
             bindings = <
 &rgb_ug RGB_SAI  &kp F1           &kp F2           &kp F3   &kp F4   &kp F5                                                                         &rgb_ug RGB_BRI  &none  &kp KP_NUMLOCK  &kp KP_DIVIDE  &kp KP_ASTERISK  &kp KP_PLUS
 &rgb_ug RGB_SAD  &kp F6           &kp F7           &kp F8   &kp F9   &kp F10  &bt BT_NXT                                           &tog 0           &rgb_ug RGB_BRD  &none  &kp KP_N7       &kp KP_N8      &kp KP_N9        &kp KP_MINUS
-&rgb_ug RGB_HUI  &kp F11          &kp F12          &kp F13  &kp F14  &kp F15  &out OUT_TOG                                         &out OUT_TOG     &none            &none  &kp KP_N4       &kp KP_N5      &kp KP_N6        &kp KP_ENTER
+&rgb_ug RGB_HUI  &kp F11          &kp F12          &kp F13  &kp F14  &kp F15  &bt BT_CLR                                           &out OUT_TOG     &none            &none  &kp KP_N4       &kp KP_N5      &kp KP_N6        &kp KP_ENTER
 &rgb_ug RGB_HUD  &kp F16          &kp F17          &kp F18  &kp F19  &kp F20  &none            &none              &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &none            &none  &kp KP_N1       &kp KP_N2      &kp KP_N3        &kp KP_DOT
 &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &rgb_ug RGB_TOG  &none    &none             &rgb_ug RGB_EFR  &rgb_ug RGB_EFF    &rgb_ug RGB_SAD  &rgb_ug RGB_HUD                   &none  &kp KP_N0       &none          &none            &none
             >;
