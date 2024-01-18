@@ -11,9 +11,6 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-    macros {
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -27,7 +24,7 @@
 
             bindings = <
 &kp GRAVE  &kp N1        &kp N2         &kp N3        &kp N4              &kp N5                                                                    &kp N6  &kp N7               &kp N8     &kp N9       &kp N0      &kp MINUS
-&kp TAB    &kp Q         &kp W          &kp E         &kp R               &kp T   &kp ESCAPE                                       &kp PSCRN        &kp Y   &kp U                &kp I      &kp O        &kp P       &kp BACKSLASH
+&kp TAB    &kp Q         &kp W          &kp E         &kp R               &kp T   &kp ESCAPE                                       &kp DEL          &kp Y   &kp U                &kp I      &kp O        &kp P       &kp BACKSLASH
 &kp CAPS   &kp A         &kp S          &kp D         &kp F               &kp G   &kp ENTER                                        &kp EQUAL        &kp H   &kp J                &kp K      &kp L        &kp SEMI    &kp APOSTROPHE
 &kp LSHFT  &kp Z         &kp X          &kp C         &kp V               &kp B   &kp LEFT_ARROW  &kp UP_ARROW     &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp N   &kp M                &kp COMMA  &kp DOT      &kp SLASH   &kp RIGHT_SHIFT
 &kp LCTRL  &kp LEFT_WIN  &kp PAGE_DOWN  &kp LEFT_ALT  &lt 1 LEFT_BRACKET          &kp SPACE       &kp BACKSPACE    &kp BACKSPACE   &kp SPACE                &lt 1 RIGHT_BRACKET  &kp RALT   &kp PAGE_UP  &kp INSERT  &kp RCTRL
